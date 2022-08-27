@@ -1,29 +1,28 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-const LifeCycleFunctionalComponent = () => {
+const LifeCycleFunctionalComponent = ({ incrementor }) => {
   const [counter, setCounter] = useState(0);
 
-  //! WRONG
-  // counter += 1
-
-  // useEffect
-  useEffect(() => {
-    console.log("LifeCycleFunctionalComponent -> useEffect");
-  }, []);
-
-  // setState
-  //   Add +1 to the counter
-  console.log("LifeCycleFunctionalComponent -- Render");
+  // Incriment function
   const incriment = () => {
-    setCounter((count) => count + incrementor);
+    setCounter((counter) => counter + incrementor);
   };
 
+  // Decrement function
+  const decrement = () => {
+    setCounter((counter) => counter - incrementor);
+  };
+
+  console.log("LifeCycleFunctionalComponent -- Render " + counter);
   return (
-    <div>
+    <>
       <h2>Life Cycle Functional Component</h2>
       <p>Counter Value: {counter}</p>
-      <button onClick={incriment}>Add +1</button>
-    </div>
+      <div className="btn-container">
+        <button onClick={incriment}>Increment</button>
+        <button onClick={decrement}>Decrement</button>
+      </div>
+    </>
   );
 };
 

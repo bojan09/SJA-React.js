@@ -1,9 +1,8 @@
 import { Component } from "react";
 
-export class LifeCycleClassComponent extends Component {
+class LifeCycleClassComponent extends Component {
   constructor(props) {
     super(props);
-    console.log("LifeCycleComponent -- Constructor");
 
     // This is the initial state of the component
     this.state = {
@@ -11,32 +10,32 @@ export class LifeCycleClassComponent extends Component {
     };
   }
 
-  //   Method called after render()
-  componentDidMount() {
-    console.log("LifeCycleComponent -- ComponentDidMount");
-  }
-
-  //! function for Button add +1
   incriment = () => {
-    // WRONG
-    // this.incriment.counter += 1;
+    const incrementor = this.props.incrementor;
+    this.setState((prevState) => ({
+      counter: prevState.counter + incrementor,
+    }));
+  };
 
-    // CORRECT
-    this.setState((state) => ({ counter: ++state.counter }));
-
-    // logging the results to the console
-    console.log("incriment", this.state.counter);
+  decrement = () => {
+    const incrementor = this.props.incrementor;
+    this.setState((prevState) => ({
+      counter: prevState.counter - incrementor,
+    }));
   };
 
   //   Method called every time component needs to re-render
   render() {
-    console.log("LifeCycleComponent -- Render");
+    console.log("LifeCycleClassComponent -- Render " + this.state.counter);
     return (
       <>
         <h2>Life Cycle Class Component</h2>
         <p>Counter value: {this.state.counter}</p>
         {/* Change initial state */}
-        <button onClick={this.incriment}>Add +1</button>
+        <div className="btn-container">
+          <button onClick={this.incriment}>Increment</button>
+          <button onClick={this.decrement}>Decrement</button>
+        </div>
       </>
     );
   }
