@@ -2,6 +2,8 @@ import LifeCycleClassComponent from "./components/LifeCycleClassComponent";
 import LifeCycleFunctionalComponent from "./components/LifeCycleFunctionalComponent";
 import { Login } from "./components/Login";
 
+const incrementor = 6;
+
 const App = () => {
   return (
     <div className="App">

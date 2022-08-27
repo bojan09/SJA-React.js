@@ -15,7 +15,7 @@ const LifeCycleFunctionalComponent = () => {
   //   Add +1 to the counter
   console.log("LifeCycleFunctionalComponent -- Render");
   const incriment = () => {
-    setCounter((count) => ++count);
+    setCounter((count) => count + incrementor);
   };
 
   return (
