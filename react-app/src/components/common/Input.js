@@ -12,15 +12,31 @@ export const Input = ({
 }) => {
   const iconType = type === "password" ? "fa fa-eye-slash" : "fa fa-eye";
 
+  const shouldDisplayTextArea = () => {
+    return name === "comment" && value && value.length > 8;
+  };
+
   return (
     <>
-      <input
-        type={type}
-        placeholder={placeholder}
-        onChange={onChange}
-        value={value}
-        id={id}
-      />
+      {shouldDisplayTextArea ? (
+        <textarea
+          name={name}
+          id={id}
+          cols="22"
+          rows="3"
+          value={value}
+          onChange={onChange}
+        />
+      ) : (
+        <input
+          type={type}
+          placeholder={placeholder}
+          onChange={onChange}
+          value={value}
+          name={name}
+          id={id}
+        />
+      )}
       {name === "password" && (
         <button onMouseDown={mouseDown} onMouseUp={mouseUp}>
           <i className={iconType}></i>
