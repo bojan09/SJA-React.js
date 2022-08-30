@@ -1,3 +1,5 @@
+Homework
+
 // Task 1
 // change the LifecycleFuncComponent and LifecycleClassComponent
 // to receive a property called incrementor that increments the value
