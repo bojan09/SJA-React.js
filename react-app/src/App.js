@@ -1,8 +1,13 @@
-import React, { useEffect } from "react";
-import Dropdown from "./components/Dropdown";
+import { DisplayDropdowns } from "./components/DisplayDropdowns";
+import { Examples } from "./components/Examples";
 
 const App = () => {
-  return <h1>Hello world</h1>;
+  return (
+    <>
+      <DisplayDropdowns />
+      <Examples />
+    </>
+  );
 };
 
 export default App;
