@@ -1,13 +1,5 @@
-import { DisplayDropdowns } from "./components/DisplayDropdowns";
-import { Examples } from "./components/Examples";
-
 const App = () => {
-  return (
-    <>
-      <DisplayDropdowns />
-      <Examples />
-    </>
-  );
+  return <div></div>;
 };
 
 export default App;
