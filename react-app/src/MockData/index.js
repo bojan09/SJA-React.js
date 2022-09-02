@@ -1,42 +1,22 @@
-export const socials = [
+const todoData = [
   {
-    value: "facebook",
-    name: "Facebook",
-  },
-
-  {
-    value: "instagram",
-    name: "Instagram",
-  },
-
-  {
-    value: "twitter",
-    name: "Twitter",
-  },
-
-  {
-    value: "youtube",
-    name: "Youtube",
-  },
-];
-
-export const people = [
-  {
-    value: "1",
-    name: "Jimmy",
-  },
-
-  {
-    value: "2",
-    name: "Hank",
-  },
-
-  {
-    value: "3",
-    name: "Heinzenburg",
+    id: 1,
+    text: "Finish Task 1",
+    completed: false,
   },
   {
-    value: "4",
-    name: "Saul",
+    id: 2,
+    text: "Finish Task 2",
+    completed: false,
+  },
+  {
+    id: 3,
+    text: "Finish Task 3",
+    completed: false,
+  },
+  {
+    id: 4,
+    text: "Finish Task 4",
+    completed: false,
   },
 ];
