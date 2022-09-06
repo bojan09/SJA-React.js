@@ -1,4 +1,4 @@
-const todoData = [
+export const MockData = [
   {
     id: 1,
     text: "Finish Task 1",

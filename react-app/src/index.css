@@ -1,3 +1,23 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+
+
 li{
-    
+  font-size:20px;  
+  padding: 10px;
+  margin-inline:auto;
+  border: 1px solid #000;
+  list-style-type: none;
+  width: 200px;
+  text-align: center;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.mark-as-done{
+  text-decoration: line-through;
 }
