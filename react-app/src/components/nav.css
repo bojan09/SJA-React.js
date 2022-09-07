@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f3f3f3;
+    margin-bottom: 2em;
+}
+
+ul {
+    display: flex;
+    margin-left: 1em;
+}
+
+li {
+    font-size: 1.2em;
+    margin: .6em;
+    list-style-type: none;
+}
