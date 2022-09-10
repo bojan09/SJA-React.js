@@ -1,5 +1,5 @@
-Class 07
+Class 08
 
-React Routing
+React Routing and useContext 
 
-Installing and using the React Router
+Installing and using the ReactRouter, also diving into useContext
