@@ -1,16 +1,11 @@
-// Routes
-import { Route, Routes } from "react-router-dom";
-// components
-import { Nav, Weather, Cities } from "./components/";
+/* import { PureUnpure } from "./components/PureUnpure"; */
+import { Counter } from "./components/Counter";
 
 const App = () => {
   return (
     <div>
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Weather />} />
-        <Route path="/search-cities" element={<Cities />} />
-      </Routes>
+      {/* <PureUnpure /> */}
+      <Counter />
     </div>
   );
 };
